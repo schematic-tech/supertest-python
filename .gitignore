@@ -1,0 +1,12 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+/build/
+/dist/
+/wheelhouse/
+*.egg-info/
+.venv/
+.pytest_cache/
+# Created in the checkout by the pinned PyPI publishing action.
+/.github/.tmp/.generated-actions/run-pypi-publish-in-docker-container/
+/dist/
