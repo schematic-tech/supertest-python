@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "schematic-supertest"
+version = "0.1.0"
+description = "Authoring primitives for Schematic Supertests"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{ name = "Schematic" }]
+license = "MIT OR Apache-2.0"
+license-files = ["LICENSE-MIT", "LICENSE-APACHE"]
+dependencies = []
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+schematic = ["py.typed"]
+
+[project.urls]
+Repository = "https://github.com/schematic-tech/supertest-python"
