@@ -4,16 +4,28 @@
 python -m pip install schematic-supertest
 ```
 
+From the [text-tools example](examples/text-tools):
+
 ```python
 from schematic import *
 
+from text_tools.text import collapse_spaces
+
+
 @supertest
-def integer_division_is_bounded(value: int, divisor: int):
-    assume(value >= 0 and divisor > 0)
-    assert value // divisor <= value
+def collapsing_spaces_again_changes_nothing(text: str):
+    once = collapse_spaces(text)
+    twice = collapse_spaces(once)
+
+    assert twice == once
 ```
 
 See the [Getting Started Documentation](https://docs.schematic.tech/pup).
+
+## Example
+
+Try [text-tools](https://github.com/schematic-tech/supertest-python/tree/main/examples/text-tools). It includes a supertest
+that finds a space-normalization bug.
 
 ## License
 
